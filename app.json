@@ -1,0 +1,76 @@
+{
+  "name": "cometd to kafka",
+  "description" : "a simple cometd to kafka translation. WIP",
+  "repository":"https://github.com/arieunier/cometdtokafka",
+  "keywords": ["python", "kafka"], 
+  "scripts": {
+    },
+  "formation": {
+    "worker" : {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+    {"plan": "timber-logging:free"}
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "env":
+    {
+      "CONSUMER_KEY": {
+        "Description" : "SF Connected App Consumer Key",
+        "value" : "SF Connected App Consumer Key",
+        "required" : false
+      },
+      "CONSUMER_SECRET": {
+        "Description" : "SF Connected App Consumer Secret",
+        "value" : "SF Connected App Consumer Secret",
+        "required" : false
+      },
+      "USERNAME": {
+        "Description" : "username of the SF Connected App",
+        "value" : "username of the SF Connected App",
+        "required" : false
+      },
+      "PASSWORD": {
+        "Description" : "password of the SF connected App",
+        "value" : "password of the SF connected App",
+        "required" : false
+      },
+      "TOPICS": {
+        "Description" : "list of topics",
+        "value" : "/topic/hc_301586;/data/AccountChangeEvent;/event/XX",
+        "required" : false
+      },
+      "KAFKA_URL": {
+        "Description" : "KAFKA Url to connect to - will be filled if you deploy Heroku Kafka Addon",
+        "value" : "KAFKA Url to connect to - will be filled if you deploy Heroku Kafka Addon",
+        "required" : false
+      },
+      "KAFKA_CLIENT_CERT": {
+        "Description" : "Kafka Client certificate - will be filled if you deploy Heroku Kafka Addon",
+        "value" : "Kafka Client certificate - will be filled if you deploy Heroku Kafka Addon",
+        "required" : false
+      },
+      "KAFKA_CLIENT_CERT_KEY": {
+        "Description" : "Kafla Client Key - will be filled if you deploy Heroku Kafka Addon ",
+        "value" : "Kafla Client Key - will be filled if you deploy Heroku Kafka Addon ",
+        "required" : false
+      },
+      "KAFKA_TRUSTED_CERT": {
+        "Description" : "Kafka CA - will be filled if you deploy Heroku Kafka Addon",
+        "value" :  "Kafka CA - will be filled if you deploy Heroku Kafka Addon",
+        "required" : false
+      },
+      "KAFKA_PREFIX": {
+        "Description" : "Kafka topic prefix - will be filled if you deploy Heroku Kafka Addon",
+        "value" : "Kafka topic prefix - will be filled if you deploy Heroku Kafka Addon",
+        "required" : false
+      }
+
+    }
+}
