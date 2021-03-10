@@ -11,9 +11,6 @@
       "size": "free"
     }
   },
-  "addons": [
-    {"plan": "timber-logging:free"}
-  ],
   "buildpacks": [
     {
       "url": "heroku/python"
